@@ -100,6 +100,8 @@ class MainActivity : AppCompatActivity() {
                             button.isEnabled = false
                             button.isClickable = false
                             buttonR.visibility = View.VISIBLE
+                            wordToGuess = getRandomFourLetterWord()
+
                         }
                     }
 
@@ -139,7 +141,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private val wordToGuess = getRandomFourLetterWord()
+    private var wordToGuess = getRandomFourLetterWord()
 
     private fun checkGuess(guess: String) : String {
         var result = ""
